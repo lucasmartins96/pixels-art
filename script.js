@@ -17,8 +17,8 @@ colorPalette.addEventListener('click', (event) => {
 }, false);
 
 document.addEventListener('click', (event) => {
-  let colorSelected = document.querySelector('.selected').id;
-  let target = event.target;
+  const colorSelected = document.querySelector('.selected').id;
+  const target = event.target;
   if (target.classList.contains('pixel')) {
     target.style.backgroundColor = colorSelected;
   }
