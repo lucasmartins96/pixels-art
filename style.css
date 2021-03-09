@@ -13,3 +13,13 @@
 .blue { background-color: blue;}
 
 .green { background-color: green;}
+
+.table { display: table;}
+
+.tr { display: table-row;}
+
+.td { display: table-cell;}
+
+.pixel {
+  background-color: white;
+}
