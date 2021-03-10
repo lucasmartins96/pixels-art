@@ -12,6 +12,10 @@ const inputBoardSize = document.getElementById('board-size');
 
 pixelBoard.innerHTML = '';
 
+/* window.onload = () => {
+
+}; */
+
 colorPalette.addEventListener('click', (event) => {
   for (let index = 0; index < colorArray.length; index += 1) {
     if (colorArray[index].className === 'color selected') {
@@ -53,6 +57,7 @@ clearButton.addEventListener('click', () => {
 }, false);
 
 vqvButton.addEventListener('click', () => {
+  if (inputBoardSize.value === '') alert('Board inválido');
   pixelBoard.innerHTML = '';
   const sizeValue = parseInt(inputBoardSize.value, 10);
   for (let index = 0; index < sizeValue; index += 1) {
