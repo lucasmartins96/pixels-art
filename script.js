@@ -9,7 +9,7 @@ const vqvButton = document.getElementById('generate-board');
 const inputBoardSize = document.getElementById('board-size');
 const randomBgColorArray = document.querySelectorAll('.random-bgcolor');
 
-pixelBoard.innerHTML = '';
+//pixelBoard.innerHTML = '';
 
 /** Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random */
 function getRandomArbitrary(min, max) {
