@@ -62,7 +62,7 @@ function checkBoardSizeInput(value) {
 
 vqvButton.addEventListener('click', () => {
   const sizeValue = checkBoardSizeInput(inputBoardSize.value);
-  if (sizeValue === '') alert('Board inválido');
+  if (sizeValue === '') alert('Board inválido!');
   pixelBoard.innerHTML = '';
   for (let index = 0; index < sizeValue; index += 1) {
     const trClass = document.createElement('div');
