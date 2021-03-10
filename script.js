@@ -56,16 +56,26 @@ clearButton.addEventListener('click', () => {
   }
 }, false);
 
+function checkBoardSizeInput(value) {
+  if (value === '') return value;
+
+  let sizeValue = parseInt(value, 10);
+  if (sizeValue < 5) sizeValue = 5;
+  if (sizeValue > 50) sizeValue = 50;
+
+  return sizeValue;
+}
+
 vqvButton.addEventListener('click', () => {
-  if (inputBoardSize.value === '') alert('Board inválido');
+  const sizeValue = checkBoardSizeInput(inputBoardSize.value);
+  if (sizeValue === '') alert('Board inválido');
   pixelBoard.innerHTML = '';
-  const sizeValue = parseInt(inputBoardSize.value, 10);
   for (let index = 0; index < sizeValue; index += 1) {
-    let trClass = document.createElement('div');
+    const trClass = document.createElement('div');
     trClass.className = 'tr';
     pixelBoard.appendChild(trClass);
     for (let index2 = 0; index2 < sizeValue; index2 += 1) {
-      let tdClass = document.createElement('div');
+      const tdClass = document.createElement('div');
       tdClass.className = 'td pixel';
       trClass.appendChild(tdClass);
     }
