@@ -30,6 +30,10 @@ colorPalette.addEventListener('click', (event) => {
   element.target.className = 'color selected';
 }, false);
 
+/*
+* Recorri ao seguinte site, compartilhado no slack da turma pelo colega Matheus H. Gois, na utilização da função getComputedStyle()
+* Link: https://zellwk.com/blog/css-values-in-js/
+*/
 document.addEventListener('click', (event) => {
   const colorSelected = document.querySelector('.selected');
   const style = getComputedStyle(colorSelected);
